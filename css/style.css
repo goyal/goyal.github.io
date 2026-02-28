@@ -1,0 +1,47 @@
+.fixed-right-align {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 32px;
+	font-weight: lighter;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: lowercase;
+	color: #808080;
+	text-align: right;
+	position: relative;
+	top: 2px;
+	right: 8px;
+}
+.heading {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 72px;
+	font-weight: lighter;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: lowercase;
+	color: #808080;
+}
+.subheading {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: inherit;
+	color: #808080;
+}
+.sectionheading {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	color: #800000;
+}
+.box {
+	margin: 8px 24px 8px 24px;
+	padding: 8px 24px 8px 24px;
+}
+.ImageBorder {
+    border-width: 1px;
+    border-color: Black;
+}

@@ -1,8 +1,7 @@
-﻿var BASE_URL = "https://s3.amazonaws.com/anshulgo.com";
-
+﻿
 function showResume(path)
 {
-	window.location.href = BASE_URL + path;
+	window.location.href = path;
 }
 
 function navigateToUrl(url)

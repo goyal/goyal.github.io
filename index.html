@@ -1,211 +1,402 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta name="google-site-verification" content="q0vWqrk1rTNbv11ZS516QOKpQhiRa1GpIBBIb9KyH2g" />
-<link type="text/css" href="./css/custom-theme/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
-<link type="text/css" href="./css/style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Anshul Goyal</title>
 
-<title>Anshul Goyal</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 
-<script type="text/javascript" language="javascript" src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" language="javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
-<script type="text/javascript" language="javascript" src="js/src.js"></script>
+  <style>
+    body {
+      background: #f5f5f7;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
 
-<!-- background game logic-->
-<script type="text/javascript" src="./js/main.js"></script>
-<script type="text/javascript" src="./js/contentloader.js"></script>
-<script type="text/javascript" src="./js/compounds.js"></script>
-<script type="text/javascript" src="./js/modernizr-2.0.6.js"></script>
-<script type="text/javascript">
-	window.onload = function()
-	{
-		main();
-	}
-</script>
+    .sidebar {
+      background: linear-gradient(160deg, #1f2933, #111827);
+      color: #fff;
+      min-height: 100vh;
+      transition: background 0.3s ease;
+    }
+
+    .avatar img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.2);
+    }
+
+    .job-logo img {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    /* --- DARK MODE --- */
+    body.dark-mode {
+      background: #0f1115;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .sidebar {
+      background: linear-gradient(160deg, #0d1117, #000000);
+    }
+
+    body.dark-mode .card {
+      background: #1a1d23;
+      border-color: #2a2e36;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode h2,
+    body.dark-mode h5,
+    body.dark-mode h6 {
+      color: #e5e7eb !important;
+    }
+
+    body.dark-mode .text-muted {
+      color: #9ca3af !important;
+    }
+
+    body.dark-mode img {
+      border-color: #2a2e36;
+    }
+
+    body.dark-mode .badge {
+      background-color: #2d3748 !important;
+      color: #e5e7eb !important;
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
 </head>
 
-<canvas style="position:fixed;top:0;left:0;z-index:-1;" id="canvas" oncontextmenu="return false;">
-	Your browser does not support HTML5 canvas.
-</canvas>
+<body>
+<div class="container-fluid">
+  <div class="row">
 
-<body class="box" id="root">
-<div class="fixed-right-align"><a title="mailto:goyal.anshul@gmail.com?subject='Lets have a word'" class="fixed-right-align" href="mailto:goyal.anshul@gmail.com?subject='Lets have a word'">drop me a note</a> <br /> 
+    <!-- Sidebar -->
+    <aside class="col-md-3 col-lg-2 sidebar d-flex flex-column align-items-center py-4">
+      <div class="avatar mb-3">
+        <img src="images/me.png" alt="">
+      </div>
+      <h4 class="fw-semibold">Anshul Goyal</h4>
+      <p class="text-white-50 mb-4">Senior Software Developer</p>
 
-<img class="fixed-right-align" alt="mobygames:anshul goyal" title="mobygames:anshul goyal" name="http://www.mobygames.com/developer/sheet/view/developerId,594494/" style="cursor: pointer;" height="25" src="images/icons/mobygamesicon.png" width="25" border="0" onclick="javascript:navigateToUrl(this.name)" /> 
+      <h6 class="text-uppercase text-white-50 mt-4">About</h6>
+      <p class="small text-white-75 text-center px-3">
+        I love working with latest and richest tech. I am always eager to learn new technologies and improve my skills.
+      </p>
 
-<img class="fixed-right-align" alt="linkedin:anshul goyal" title="linkedin:anshul goyal" name="https://www.linkedin.com/in/anshulgo/" style="cursor: pointer;" height="25" src="images/icons/linkedin-logo.png" width="25" border="0" onclick="javascript:navigateToUrl(this.name)" />
+      <h6 class="text-uppercase text-white-50 mt-4">Contact</h6>
+      <p class="small text-white-75 text-center px-3">
+        goyal.anshul@gmail.com<br><br>
+        <a href="https://www.linkedin.com/in/anshulgo/" target="_blank">
+        <img src="images/icons/linkedin-logo.png" alt="LinkedIn"
+            class="img-fluid rounded shadow-sm"
+            style="width: 30px; height: 30px; object-fit: contain; cursor: pointer;">
+        </a>&nbsp;
+        <a href="http://www.mobygames.com/developer/sheet/view/developerId,594494/" target="_blank">
+        <img src="images/icons/mobygamesicon.png" alt="MobyGames"
+            class="img-fluid rounded shadow-sm"
+            style="width: 30px; height: 30px; object-fit: contain; cursor: pointer;">
+        </a>&nbsp;
+        <a href="http://boardgamegeek.com/user/anshulgo" target="_blank">
+        <img src="images/icons/bgg_icon.jpg" alt="MobyGames"
+            class="img-fluid rounded shadow-sm"
+            style="width: 30px; height: 30px; object-fit: contain; cursor: pointer;">
+        </a>&nbsp;
+        <a href="http://instagram.com/goyalanshul" target="_blank">
+        <img src="images/icons/instagram-icon.png" alt="MobyGames"
+            class="img-fluid rounded shadow-sm"
+            style="width: 30px; height: 30px; object-fit: contain; cursor: pointer;">
+        </a>
+      </p>
 
-<img class="fixed-right-align" alt="bgg:anshul goyal" title="bgg:anshul goyal" name="http://boardgamegeek.com/user/anshulgo" style="cursor: pointer;" height="25" src="images/icons/bgg_icon.jpg" width="25" border="0" onclick="javascript:navigateToUrl(this.name)" /> 
+      <!-- <p>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
+          <span class="theme-toggle" id="themeToggle">🌙 Dark Mode</span>
+        </div>
+      </p> -->
+    </aside>
 
-<img class="fixed-right-align" alt="instagram:anshul goyal" title="instagram:anshul goyal" name="http://instagram.com/goyalanshul" style="cursor: pointer;" height="25" src="images/icons/instagram-icon.png" width="25" border="0" onclick="javascript:navigateToUrl(this.name)" />
+    <!-- Main content -->
+    <main class="col-md-9 col-lg-10 p-4">
+
+      <!-- Skills Section -->
+      <h3 class="text-uppercase text-muted mt-4">Skills</h3>
+
+<div class="row g-4">
+
+  <!-- Card 1 -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm text-center d-flex justify-content-center align-items-center"
+         style="width: 100%; height: 200px; border-radius: 12px;">
+      <div>
+        <h6 class="fw-bold mb-2">Programming Languages</h6>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-secondary m-1">Rust</span>
+          <span class="badge bg-secondary m-1">Ruby</span>
+          <span class="badge bg-secondary m-1">Go</span>
+          <span class="badge bg-secondary m-1">Java/Scala/Kotlin</span>
+          <span class="badge bg-secondary m-1">C++</span>
+          <span class="badge bg-secondary m-1">C#</span>
+          <span class="badge bg-secondary m-1">Python</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm text-center d-flex justify-content-center align-items-center"
+         style="width: 100%; height: 200px; border-radius: 12px;">
+      <div>
+        <h6 class="fw-bold mb-2">LLM</h6>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-secondary m-1">Claude Code</span>
+          <span class="badge bg-secondary m-1">ChatGPT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm text-center d-flex justify-content-center align-items-center"
+         style="width: 100%; height: 200px; border-radius: 12px;">
+      <div>
+        <h6 class="fw-bold mb-2">Data Streaming</h6>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-secondary m-1">Apache Kafka</span>
+          <span class="badge bg-secondary m-1">Apache Flink (Datastream/SQL)</span>
+          <span class="badge bg-secondary m-1">Apache Beam</span>
+          <span class="badge bg-secondary m-1">Apache Spark</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm text-center d-flex justify-content-center align-items-center"
+         style="width: 100%; height: 200px; border-radius: 12px;">
+      <div>
+        <h6 class="fw-bold mb-2">Cloud Technologies</h6>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-secondary m-1">Google Cloud Platform</span>
+          <span class="badge bg-secondary m-1">Kubernetes</span>
+          <span class="badge bg-secondary m-1">Microsoft Azure</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm text-center d-flex justify-content-center align-items-center"
+         style="width: 100%; height: 200px; border-radius: 12px;">
+      <div>
+        <h6 class="fw-bold mb-2">Storage/Databases</h6>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-secondary m-1">MySQL</span>
+          <span class="badge bg-secondary m-1">PostgreSQL</span>
+          <span class="badge bg-secondary m-1">Redis/Memcached</span>
+          <span class="badge bg-secondary m-1">Elasticsearch</span>
+          <span class="badge bg-secondary m-1">Spanner</span>
+          <span class="badge bg-secondary m-1">Bigtable</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm text-center d-flex justify-content-center align-items-center"
+         style="width: 100%; height: 200px; border-radius: 12px;">
+      <div>
+        <h6 class="fw-bold mb-2">Game Engines/ Game Platforms</h6>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-secondary m-1">Unity</span>
+          <span class="badge bg-secondary m-1">Unreal Engine</span>
+          <span class="badge bg-secondary m-1">Scimitar (Ubisoft)</span>
+          <span class="badge bg-secondary m-1">PC</span>
+          <span class="badge bg-secondary m-1">PlayStation 4</span>
+          <span class="badge bg-secondary m-1">Xbox One</span>
+          <span class="badge bg-secondary m-1">Nintendo Switch</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm text-center d-flex justify-content-center align-items-center"
+         style="width: 100%; height: 200px; border-radius: 12px;">
+      <div>
+        <h6 class="fw-bold mb-2">Concepts</h6>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-secondary m-1">gRPC</span>
+          <span class="badge bg-secondary m-1">GraphQL</span>
+          <span class="badge bg-secondary m-1">Multiplayer</span>
+          <span class="badge bg-secondary m-1">Online Services</span>
+          <span class="badge bg-secondary m-1">Distributed Systems</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
-<div class="heading">anshul goyal</div>
-<div class="subheading">I am a programmer. I take pleasure in writing code that involves the latest and richest tech.</div>
-<br/>
-<div class="subheading">Resume: <img alt="AnshulGoyal_Resume.pdf" title="AnshulGoyal_Resume.pdf" name="Resume/AnshulGoyal_Resume.pdf" style="cursor: pointer;" height="25" src="images/icons/adobe_pdf_icon.png" width="25" border="0" onclick="javascript:showResume(this.name)" /> </div>
-<div>
-<p class="sectionheading"><img align="center" alt="Shopify" title="Shopify" name="Shopify" id="http://www.shopify.com" style="cursor: pointer;" src="images/icons/shopify-logo.png" width="40" border="0" onclick="javascript:navigateToUrl(this.id)" />Current Role: Senior Developer @ Shopify</p>
 
-<p class="sectionheading"><img align="center" alt="Ubisoft" title="Ubisoft" name="Ubisoft" id="http://www.ubisoft.com" style="cursor: pointer;" src="images/icons/ubisoft-logo.png" width="40" border="0" onclick="javascript:navigateToUrl(this.id)" />Online Programmer @ Ubisoft</p>
-<ul>
-<li class="subheading">Earlier: Network Programmer @ Ubisoft<br/><br/>
-Implemented network play features for PC and Console (PS4, Xbox One, Nintendo Switch) games. Also worked on matchmaking and several other online services. I am very adept in C++, Python, C# and GO.
-<br/><br/>
-Game Credits:<br/>
-<img alt="Hyper Scape" title="Hyper Scape" name="Hyper Scape" height="200" src="images/games/hyperscape.png" width="400" border="0" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img alt="Rainbow Six Siege" title="Rainbow Six Siege" name="Rainbow Six Siege" height="200" src="images/games/rainbow6.jpg" width="400" border="0" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img alt="Assassin's Creed Unity" title="Assassin's Creed Unity" name="Assassin's Creed Unity" height="200" src="images/games/acunity.jpg" width="400" border="0" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img alt="Watch Dogs" title="Watch Dogs" name="Watch Dogs" height="200" src="images/games/watchdogs.jpg" width="400" border="0" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br/>
-<img alt="Assassin's Creed IV Black Flag" title="Assassin's Creed IV Black Flag" name="Assassin's Creed IV Black Flag" height="200" src="images/games/acbf.jpg" width="400" border="0" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img alt="Tom Clancy's Splinter Cell Blacklist" title="Tom Clancy's Splinter Cell Blacklist" name="Tom Clancy's Splinter Cell Blacklist" height="200" src="images/games/scblacklist.jpg" width="400" border="0" />
-</li>
-</ul>
-<p class="sectionheading"><img align="center" alt="Electronic Arts" title="Electronic Arts" name="Electronic Arts" id="http://www.ea.com" style="cursor: pointer;" height="40" src="images/icons/ea-logo.png" width="40" border="0" onclick="javascript:navigateToUrl(this.id)" />Server Engineer @ Playfish/Electronic Arts</p>
-<ul class="subheading">
-Implemented network play features for smartphone (iOS) games. Worked on several other online services in Java and C#.
-<br/><br/>
-Game Credits:
-<table cellspacing="16">
-<tbody>
-<tr>
-<td><img alt="FIFA Superstars iOS" title="FIFA Superstars iOS" name="FIFA Superstars iOS" id="https://itunes.apple.com/us/app/fifa-superstars/id438604227" style="cursor: pointer;" height="200" src="images/games/ffs.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img alt="Trouble Makers iOS" title="Trouble Makers iOS" name="Trouble Makers iOS" id="http://itunes.apple.com/ca/app/trouble-makers/id493370396?mt=8" style="cursor: pointer;" height="200" src="images/games/troublemakers.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img alt="RestaurantCity - GourmetEdition iOS" title="RestaurantCity - GourmetEdition iOS" name="RestaurantCity - GourmetEdition iOS" id="http://itunes.apple.com/ca/app/restaurant-city-gourmet-edition/id433256192?mt=8" style="cursor: pointer;" height="200" src="images/games/rc-ios-main.jpg" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-</tr>
-</tbody>
-</table>
-</ul>
+      <!-- Current Role -->
+      <h3 class="text-uppercase text-muted mt-4">Current Role</h3>
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <div class="job-logo">
+            <img src="images/icons/shopify-logo.png" class="img-fluid rounded" alt="Shopify logo">
+          </div>
+          <div>
+            <h5 class="card-title mb-1">Senior Software Developer</h5>
+            <p class="text-muted small mb-2">Shopify · 2020 – Present · Montreal, QC</p>
+            <p class="card-text small">
+              Engaged in developing backend services powering large-scale e-commerce experiences. Developing data
+              pipelines, optimizing performance, and mentoring engineers across teams.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Previous Experience -->
+      <h3 class="text-uppercase text-muted mt-4">Previous Experience</h3>
+
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <div class="job-logo">
+            <img src="images/icons/ubisoft-logo.png" class="img-fluid rounded" alt="Ubisoft logo">
+          </div>
+          <div>
+            <h5 class="card-title mb-1">Network/Online Developer</h5>
+            <p class="text-muted small mb-2">Ubisoft · 2012 – 2020</p>
+            <p class="card-text small">
+              Implemented network play features for PC and Console (PS4, Xbox One, Nintendo Switch) games. Also worked on matchmaking and several other online services. I am very adept in C++, Python, C# and Go.
+            </p>
+          </div>
+        </div>
+        <div>
+            <img src="images/games/hyperscape.png" class="img-fluid rounded" alt="Hyper Scape game", width="100">
+            <img src="images/games/rainbow6.jpg" class="img-fluid rounded" alt="Rainbow Six game", width="100">
+            <img src="images/games/acunity.jpg" class="img-fluid rounded" alt="Assassin's Creed Unity game", width="100">
+            <img src="images/games/watchdogs.jpg" class="img-fluid rounded" alt="Watch Dogs game", width="100">
+            <img src="images/games/acbf.jpg" class="img-fluid rounded" alt="Assassin's Creed Black Flag game", width="100">
+            <img src="images/games/scblacklist.jpg" class="img-fluid rounded" alt="Splinter Cell game", width="100">
+          </div>
+      </div>
+
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <div class="job-logo">
+            <img src="images/icons/ea-logo.png" class="img-fluid rounded" alt="EA logo">
+          </div>
+          <div>
+            <h5 class="card-title mb-1">Server Engineer</h5>
+            <p class="text-muted small mb-2">Electronic Arts · 2011 – 2012</p>
+            <p class="card-text small">
+              Implemented network play features for smartphone (iOS) games. Worked on several other online services in Java and C#.
+            </p>
+          </div>
+        </div>
+        <div>
+            <img src="images/games/ffs.png" class="img-fluid rounded" alt="Fifa superstars game", width="100">
+            <img src="images/games/troublemakers.png" class="img-fluid rounded" alt="Trouble Makers game", width="100">
+            <img src="images/games/rc-ios-main.jpg" class="img-fluid rounded" alt="Restaurant City iOS game", width="100">
+          </div>
+      </div>
+
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <div class="job-logo">
+            <img src="images/icons/amdocs.png" class="img-fluid rounded" alt="Amdocs logo">
+          </div>
+          <div>
+            <h5 class="card-title mb-1">Sr. Subject Matter Expert/Software Developer</h5>
+            <p class="text-muted small mb-2">Amdocs · 2006 – 2009</p>
+            <p class="card-text small">
+              I contributed to the enhancement of existing products by devising creative solutions aligned with customer requirements and ensuring support for current production versions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <div class="job-logo">
+            <img src="images/icons/press-start.png" class="img-fluid rounded" alt="Game Jam logo">
+          </div>
+          <div>
+            <h5 class="card-title mb-1">Hobby Projects : Game Jams</h5>
+            <p class="text-muted small mb-2">Tinkering Around</p>
+            <p class="card-text small">
+              I have participated in several game jams over the years, both online and in-person. Some of these are solo and others are with friends.
+            </p>
+          </div>
+        </div>
+        <div>
+            <img src="images/games/skippy.png" class="img-fluid rounded" alt="Skippy game", width="100">
+            <img src="images/games/htmfasp.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/droneracer.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/gameroom.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/storyofmylife.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/pwrong.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/vibrantcity.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/noevil.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/cyberterminal.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/badmoodrising.jpg" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/aquila.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/devilslair.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/derelict.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/chainjam.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/10floors.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/shotgunhades.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/chetspeedrider.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/ashadowfrombeyond.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/hjarta.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/ctf-aisandbox.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/ctfu.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/banana-samurai.PNG" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/nom-nom-rider.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/the-fall.png" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/fattie-butterfly-hunt.JPG" class="img-fluid rounded" alt="Game", width="100">
+            <img src="images/games/tetris.JPG" class="img-fluid rounded" alt="Game", width="100">
+          </div>
+      </div>
+
+    </main>
+  </div>
 </div>
-<div>
-<p class="sectionheading">Team/Solo Game Projects</p>
-<table cellspacing="16">
-<tbody>
 
-<tr>
-<td><img class="ImageBorder" alt="Skippy the Dolphin: Makin' Waves" title="Skippy the Dolphin: Makin' Waves" name="Skippy the Dolphin: Makin' Waves" id="http://globalgamejam.org/2017/games/skippy-dolphin-makin-waves" style="cursor: pointer;" height="200" src="images/games/skippy.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="How to Mince Friends and Simmer People" title="How to Mince Friends and Simmer People" name="How to Mince Friends and Simmer People" id="http://globalgamejam.org/2016/games/how-mince-friends-and-simmer-people" style="cursor: pointer;" height="200" src="images/games/htmfasp.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="DroneRacer" title="DroneRacer" name="DroneRacer" id="http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=18701" style="cursor: pointer;" height="200" src="images/games/droneracer.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-</tr>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<tr>
-<td><img class="ImageBorder" alt="GameRoom" title="GameRoom" name="GameRoom" id="http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=18701" style="cursor: pointer;" height="200" src="images/games/gameroom.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="Story of My Life" title="Story of My Life" name="Story of My Life" id="jams/meatlyjam/index.html" style="cursor: pointer;" height="200" src="images/games/storyofmylife.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="Pwrong" title="Pwrong" name="Pwrong" id="http://globalgamejam.org/2015/games/pwrong" style="cursor: pointer;" height="200" src="images/games/pwrong.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-</tr>
+<!-- Dark Mode Script -->
+<script>
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.textContent =
+      document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+  });
+</script>
 
-<tr>
-<td><img class="ImageBorder" alt="Vibrant City" title="Vibrant City" name="Vibrant City" id="http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=18701" style="cursor: pointer;" height="200" src="images/games/vibrantcity.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="No Evil" title="No Evil" name="No Evil" id="https://www.youtube.com/watch?v=O-eHFDXJK3Q" style="cursor: pointer;" height="200" src="images/games/noevil.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="Cyber Terminal" title="Cyber Terminal" name="Cyber Terminal" id="http://anshul_goyal.itch.io/cyber-terminal" style="cursor: pointer;" height="200" src="images/games/cyberterminal.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-</tr>
-
-<tr>
-<td><img class="ImageBorder" alt="Bad Mood Rising" title="Bad Mood Rising" name="Bad Mood Rising" id="jams/ggj14/index.html" style="cursor: pointer;" height="200" src="images/games/badmoodrising.jpg" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="Aquila" title="Aquila" name="Aquila" id="jams/ld28/index.html" style="cursor: pointer;" height="200" src="images/games/aquila.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="Devil's Lair" title="Devil's Lair" name="Devil's Lair" id="jams/gbjam/index.html" style="cursor: pointer;" height="200" src="images/games/devilslair.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-</tr>
-
-<tr>
-<td><img class="ImageBorder" alt="Derelict" title="Derelict" name="Derelict" id="http://gamejolt.com/games/derelict/18350" style="cursor: pointer;" height="200" src="images/games/derelict.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="chainjam game" title="chainjam game" name="chainjam game" id="jams/chainjam/index.html" style="cursor: pointer;" height="200" src="images/games/chainjam.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="10Floors" title="10Floors" name="10Floors" id="http://www.ludumdare.com/compo/ludum-dare-27/?action=preview&uid=18701" style="cursor: pointer;" height="200" src="images/games/10floors.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-</tr>
-
-<tr>
-<td><img class="ImageBorder" alt="Shotgun Hades" title="Shotgun Hades" name="Shotgun Hades" id="http://www.indiedb.com/games/shotgun-hades" style="cursor: pointer;" height="200" src="images/games/shotgunhades.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="Spring Break" title="SpringBreak: The Ballad of Chet Speedrider" name="SpringBreak: The Ballad of Chet Speedrider" id="http://www.youtube.com/watch?v=g8gX6OXyMf4" style="cursor: pointer;" height="200" src="images/games/chetspeedrider.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="A Shadow From Beyond" title="A Shadow From Beyond" name="A Shadow From Beyond" id="http://www.indiedb.com/games/a-shadow-from-beyond" style="cursor: pointer;" height="200" src="images/games/ashadowfrombeyond.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-</tr>
-
-<tr>
-<td><img class="ImageBorder" alt="Hjarta" title="Hjarta" name="Hjarta" id="jams/hjarta/index.html" style="cursor: pointer;" height="200" src="images/games/hjarta.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="CTF-AISandbox" title="Image by AISandbox" name="CTF Competition - AISandbox by AIGameDev" id="http://aisandbox.com/rankings/phase3" style="cursor: pointer;" height="200" src="images/games/ctf-aisandbox.png" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="CTFU" title="CTFU" name="CTFU - Capture The Flag U" id="portfolio/games/ctfu.html" style="cursor: pointer;" height="200" src="images/games/ctfu.PNG" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-</tr>
-
-<tr>
-<td><img class="ImageBorder" alt="BananaSamurai" title="BananaSamurai" name="Banana Samurai - Action-adventure 2D side scrolling game" id="bananasamurai/index.html" style="cursor: pointer;" height="200" src="images/games/banana-samurai.PNG" width="400" border="0" onclick="javascript:navigateToUrl(this.id)" /></td>
-<td><img class="ImageBorder" alt="NomNomRider" title="NomNomRider" name="Nom Nom Rider - Available on Windows Phone 7" id="portfolio/games/nom-nom-rider.html" style="cursor: pointer;" height="200" src="images/games/nom-nom-rider.png" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-<td><img class="ImageBorder" alt="TheFall" title="TheFall" name="The Fall - 48 Hour Game Jam" id="portfolio/games/the-fall.swf" style="cursor: pointer;" height="200" src="images/games/the-fall.png" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-</tr>
-
-<tr>
-<td><img class="ImageBorder" alt="Fattie's Butterfly Hunt" title="Fattie's Butterfly Hunt" name="Fattie's Butterfly Hunt - 48 Hour Game Jam" id="portfolio/games/fatties-butterfly-hunt.html" style="cursor: pointer;" height="200" src="images/games/fattie-butterfly-hunt.JPG" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-<td><img class="ImageBorder" alt="Tetris Clone - Test Project" title="Tetris Clone - Test Project" name="Tetris Clone - Test Project" id="portfolio/games/tetris.html" style="cursor: pointer;" height="200" src="images/games/tetris.JPG" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-</tr>
-
-</tbody>
-</table>
-</div>
-<div align="justify">
-<p class="sectionheading">Academic Writings</p>
-<ul>
-<li class="subheading"><!--<a class="subheading" href="../../download/Goyal2011-qlearning-UT2004.pdf" target="_blank">-->Human-like Bots for Unreal Tournament 2004 A Q-learning Approach to Refine UT2004 Strategies<!--</a>--><br /><br /> <i>Abstract:</i> Defining human-like behavior for bots or non-player characters (NPC) in a real-time game such as Unreal Tournament 2004 (<a class="subheading" href="http://en.wikipedia.org/wiki/Unreal_Tournament_2004" target="_blank">UT2004</a>) has always been a challenging task. Dynamic game environments challenge the bot to behave autonomously without any human supervision or intervention. We highlight how we can use Behavior Trees to define agent&rsquo;s behavior and use Reinforcement Learning (RL) technique to teach the bot how to choose actions so as to maximize numerical reward. The other motivation behind creating such an agent that can behave like a human is to participate in the Bot Prize competition [3], which is similar to the Turing test for intelligent agents, wherein the bots have to convince the human judges that &rsquo;It&rsquo; is a human, while playing the First Person Shooter (FPS) UT2004.
-    <br/>
-    <i>Note: This is a draft technical report that has never been peer reviewed or published.</i>
-</li>
-</ul>
-<br />
-<ul>
-<li class="subheading"><a class="subheading" href="../../download/AnshulGoyal_AIProjectPaper_April2010.pdf" target="_blank">Real-Time Planning Using HTN in Stealth Game</a><br /><br /> <i>Abstract:</i> Video game development have come a long way in terms of incorporating logical reasoning and decision making for Non Player Characters (NPC) either as an individual or a group working together towards a common goal. Planning is a key ability for intelligent agents when working in a group, increasing their autonomy and flexibility through the construction of sequences of actions to achieve their goals. It has been an area of research since the earliest days of Artificial Intelligence (AI) and cognitive science. This paper will explore the concepts of Hierarchical Task Network (HTN) planning algorithm and how it can be effectively used to perform real‐time planning among a group of NPC&rsquo;s in a stealth‐based game.</li>
-</ul>
-</div>
-<div>
-<p class="sectionheading">Tech</p>
-<ul>
-<li class="subheading"><a class="subheading" href="https://github.com/goyal/redisU">redisU</a> - redisU or 'redis Unity' is a free open source client for <a class="subheading" href="http://www.redis.io">Redis 2.2.10</a> that is compatible with Unity3D. Download the source code or the compiled binary from <a class="subheading" href="https://github.com/goyal/redisU">here</a>.</li>
-</ul>
-</div>
-<div>
-<p class="sectionheading">Apps</p>
-<table cellspacing="16">
-<tbody>
-<tr>
-<td><img alt="HitchWhistler" title="HitchWhistler" name="http://www.hitchwhistler.com" style="cursor: pointer;" height="350" src="images/mobile/hitchwhistler.png" width="175" border="0" onclick="javascript:navigateToUrl(this.name)" /></td>
-<td><img alt="Locemotion" title="Locemotion" name="http://www.locemotion.net" style="cursor: pointer;" height="400" src="images/mobile/locemotion.png" width="222" border="0" onclick="javascript:navigateToUrl(this.name)" /></td>
-<td><img alt="GreenMoney" title="GreenMoney" name="http://www.greenmoneyapp.com" style="cursor: pointer;" height="400" src="images/mobile/greenmoney.png" width="222" border="0" onclick="javascript:navigateToUrl(this.name)" /></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div>
-<p class="sectionheading">Other Fun Stuff</p>
-<table cellspacing="16">
-<tbody>
-<tr>
-<td><img alt="Managotchi" title="Managotchi" name="Managotchi - Raise your digital pet" id="portfolio/other/managotchi.html" style="cursor: pointer;" height="200" src="images/other/managotchi.jpg" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-<td><img alt="Madlibs" title="Madlibs" name="Madlibs - Distant Collaboration Exercise" id="madlibs/index.html" style="cursor: pointer;" height="200" src="images/other/madlibs.jpg" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-<td><img alt="7Days - An interactive photo film" title="7Days - An interactive photo film" name="7Days - An interactive photo film" id="portfolio/other/7days.html" style="cursor: pointer;" height="200" src="images/other/7days.jpg" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-</tr>
-<tr>
-<td><img alt="CHLOE" title="CHLOE" name="C.H.L.O.E" id="portfolio/other/chloe.html" style="cursor: pointer;" height="200" src="images/other/chloe.JPG" width="400" border="0" onclick="javascript:showPopup(this)" /></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div align="center">&copy; Anshul Goyal (Last Updated: May 2020)</div>
-<p><!-- Google Analytics Code Start -->
-<script type="text/javascript">// <![CDATA[
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-// ]]></script>
-<script type="text/javascript">// <![CDATA[
-try {
-var pageTracker = _gat._getTracker("UA-13141067-1");
-pageTracker._trackPageview();
-} catch(err) {}
-// ]]></script>
-<!-- Google Analytics Code End --></p>
 </body>
-
 </html>
